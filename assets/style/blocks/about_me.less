@@ -1,0 +1,79 @@
+// main: ../style.less;
+
+.about_me {
+	margin: 8.4rem 0;
+}
+
+.about_me_inner {
+	display: flex;
+	justify-content: space-between;
+
+	max-width: 1087px;
+}
+
+.about_me_photo,
+.about_content {
+	width: 50%;
+}
+
+
+.about_me_photo{
+	position: relative;
+
+	img {
+		position: relative;
+		z-index: 2;
+	}
+
+	&:before {
+		content: "";
+		width: 413px;
+		height: 413px;
+		background-color: #EFEFEF;
+
+		position: absolute;
+		left: 1rem;
+		bottom: 0;
+		z-index: 1;
+	}
+}
+
+.about_content {
+	margin-top: 2rem;
+
+	padding-left: 3.2rem;
+}
+
+.about_me_title {
+	font-size: 3rem;
+	font-weight: 700;
+	color: @black;
+}
+
+.about_me_bigtitle {
+	font-size: 6.1rem;
+    font-weight: 700;
+    color: fade(@black, 15%);
+
+    line-height: 1.1;
+
+    margin-bottom: 1.4rem;
+
+    position: relative;
+    left: -10px;
+}
+
+.about_me_text {
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 2;
+	color: @gray;
+
+	margin-bottom: 2.8rem;
+}
+
+.img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
