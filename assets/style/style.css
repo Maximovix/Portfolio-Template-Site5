@@ -292,10 +292,56 @@ h6 {
   font-weight: 300;
   line-height: 2;
   color: #6a696b;
-  margin-bottom: 2.8rem;
+  margin-bottom: 2rem;
 }
 .img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.reviews {
+  padding: 4.6rem 0;
+  position: relative;
+  background: #332f30 url("../images/reviews/Symbol 3 – 1.png") center no-repeat;
+}
+.reviews_item {
+  width: 100%;
+  max-width: 830px;
+  margin: 0 auto;
+}
+.reviews_text {
+  font-size: .94rem;
+  line-height: 2.2;
+  color: #fff;
+  text-align: center;
+}
+.reviews_author {
+  width: 100%;
+  margin-top: -51px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  text-align: center;
+}
+.reviews_photo {
+  display: block;
+  margin: 0 auto .6rem;
+  width: 103px;
+  height: 103px;
+  border-radius: 50%;
+  border: 4px solid #EFEFEF;
+}
+.reviews_name {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: #2b2a2c;
+  margin-bottom: .3rem;
+}
+.reviews_company {
+  font-size: .94rem;
+  font-style: italic;
+  font-weight: 300;
+  color: #6a696b;
+  margin-bottom: .3rem;
 }
