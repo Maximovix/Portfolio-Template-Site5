@@ -1,0 +1,52 @@
+//main: ../style.less;
+
+.label {
+	display: inline-block;
+	margin-bottom: .6rem;
+	margin-left: 1.2rem;
+
+	font-size: .8rem;
+	color: @black;
+	font-weight: 700;
+}
+
+.input,
+.textarea {
+	display: block;
+	width: 100%;
+
+	padding: 1.3rem  1.8rem;
+
+	font-family: inherit;
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 1.2;
+
+	border: 1px solid fade(#707070, 30%);
+	border-radius: 1.8rem;
+	color: @black;
+
+	&:focus {
+		outline: none;
+
+		border-color: #707070;
+	}
+
+	&::placeholder {
+		color: @black;
+	}
+}
+
+.form_grp {
+	margin-bottom: 1.8rem;
+}
+
+.textarea {
+	height: 200px;
+	resize: none;
+}
+
+.btn_form {
+	width: 100%;
+	text-align: right;
+}

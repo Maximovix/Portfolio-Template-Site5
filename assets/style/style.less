@@ -9,6 +9,10 @@ body {
 	margin: 0;
 	font-family: @mont;
 	font-size: 1rem;
+
+	&.no_scroll {
+		overflow: hidden;
+	}
 }
 
 *,
@@ -43,3 +47,8 @@ h6 {
 @import 'blocks/reviews.less';
 @import 'blocks/news.less';
 @import 'blocks/footer.less';
+@import 'modal/modal.less';
+@import 'modal/modal_work.less';
+@import 'modal/modal_resume.less';
+@import 'modal/modal_contact.less';
+@import 'modal/form.less';

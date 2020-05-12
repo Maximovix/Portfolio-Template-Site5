@@ -1,0 +1,133 @@
+//main: ../style.less;
+
+.modal_resume {
+	margin: 5rem 1rem;
+
+	text-align: center;
+}
+
+.modal_title {
+	margin-bottom: 3.6rem;
+
+	font-size: 3rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: @black;
+}
+
+.modal_resume_timeline {
+	margin: 4.2rem auto;
+
+	max-width: 768px;
+
+	display: flex;
+}
+
+.timeline_col {
+	width: 50%;
+
+	&_left {
+		padding-right: 3.2rem;
+		text-align: right;
+
+		border-right: 1px solid @gray;
+	}
+
+	&_right {
+		padding-left: 3.2rem;
+		text-align: left;
+
+		border-left: 1px solid @gray;
+	}
+}
+
+.timeline_title {
+	margin-bottom: 2.6rem;
+
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: @black;
+	text-transform: uppercase;
+}
+
+.timeline_item {
+	margin-bottom: 2.6rem;	
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.timeline_date {
+	margin-bottom: .8rem;
+
+	display: block;
+
+	text-decoration: underline;
+	font-size: .94rem;
+	color: @black;
+}
+
+.timeline_subtitle {
+	margin-bottom: .2rem;
+
+	font-size: 1.06rem;
+	font-weight: 700;
+	color: @black;
+}
+
+.timeline_position {
+	font-size: .94rem;
+	font-style: italic;
+	color: @black;
+}
+
+.timeline_text {
+	margin-top: .8rem;
+	font-size: .8rem;
+	font-weight: 300;
+	line-height: 1.5;
+	color: @gray;
+}
+
+/* Progress Bar */
+
+.progress_bar {
+	margin-bottom: 2.6rem;
+
+	display: block;
+	width: 80%;
+}
+
+.progress_bar_item {
+	display: flex;
+
+	align-items: center;
+	justify-content: space-between;
+
+	margin-bottom: .5rem;
+}
+
+.progress_bar_title {
+	font-size: .94rem;
+	font-weight: 300;
+}
+
+.progress_bar_inner {
+	padding-left: 1.2rem;
+}
+
+.progress_bar_elem {
+	width: 138px;
+	height: 6px;
+
+	background-color: #EFEFEF;
+}
+
+.progress_bar_item_value {
+	height: 100%;
+
+	background-color: @gray;
+
+	transition: width .2s linear;
+}
