@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200,300;400;700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.svg">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 	<title>Portfolio</title>
 </head>
 <body>
@@ -26,7 +27,7 @@
 					<a href="#" class="nav_item">about me</a>
 					<a href="#" class="nav_item">blog</a>
 					<a href="#" class="nav_item">contact</a>
-					<a href="#" class="nav_item nav_item_btn">hire me</a>
+					<a href="#" data-modal="#modal_hire_me" class="nav_item nav_item_btn">hire me</a>
 				</nav>
 			</div>
 		</div>
@@ -59,8 +60,8 @@
 							<img src="assets/images/intro/social/twitter.svg" alt="">
 						</a>
 					</div>
-					<a class="btn" href="#">HIRE ME</a>
-					<button class="btn" type="button">SEE MY RESUME</button>
+					<a data-modal="#modal_hire_me" class="btn" href="#">HIRE ME</a>
+					<button data-modal="#modal_resume" class="btn" type="button">SEE MY RESUME</button>
 				</div>
 				<img class="intro_photo" src="assets/images/intro/photo.png" alt="">
 			</div>
@@ -70,18 +71,18 @@
 	<div class="works">
 		<div class="container">
 			<div class="works_nav">
-				<a class="works_nav_item" href="#">All</a>
-				<a class="works_nav_item" href="#">App</a>
-				<a class="works_nav_item" href="#">Websites</a>
-				<a class="works_nav_item" href="#">Interaction</a>
+				<a class="works_nav_item" href="#" data-filter="all">All</a>
+				<a class="works_nav_item" href="#" data-filter="app">App</a>
+				<a class="works_nav_item" href="#" data-filter="website">Websites</a>
+				<a class="works_nav_item" href="#" data-filter="interaction">Interaction</a>
 			</div>
 
 			<div class="portfolio">
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="app">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">app</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -90,11 +91,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="website">
+					<div class="portfolio_item" data-modal="#modal_work_2">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">website</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -103,11 +104,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="interaction">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">interaction</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -116,11 +117,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="app">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">app</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -129,11 +130,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="app">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">app</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -142,11 +143,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="website">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">website</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -155,11 +156,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="interaction">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">interaction</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -168,11 +169,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="interaction">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">interaction</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -181,11 +182,11 @@
 					</div>
 				</div>
 
-				<div class="portfolio_col">
-					<div class="portfolio_item">
+				<div class="portfolio_col" data-cat="app">
+					<div class="portfolio_item" data-modal="#modal_work">
 						<img class="portfolio_image" src="https://placehold.it/370x300" alt="">
 						<div class="portfolio_item_content">
-							<div class="portfolio_cat">category</div>
+							<div class="portfolio_cat">app</div>
 							<div class="portfolio_title">
 								PROJECT TITLE
 								<time class="portfolio_date" datetime="2020-06-05 22:50">2018</time>
@@ -212,8 +213,8 @@
 					<h2 class="about_me_bigtitle">WHO AM I</h2>
 					<div class="about_me_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper sollicitudin, dui ligula molestie massa, sit amet laoreet nibh ex vitae dui. Aenean laoreet pellentesque lacus, eget varius massa mattis quis. Nunc ultrices urna eu nunc lobortis pulvinar. Duis viverra, quam non imperdiet scelerisque, urna nunc consequat velit, in mollis erat nibh in libero.</div>
 
-					<a class="btn" href="#">HIRE ME</a>
-					<button class="btn" type="button">SEE MY RESUME</button>
+					<a class="btn" href="#" data-modal="#modal_hire_me">HIRE ME</a>
+					<button class="btn" type="button" data-modal="#modal_resume">SEE MY RESUME</button>
 				</div>
 			</div>
 		</div>
@@ -349,21 +350,31 @@
 					<a href="#" class="footer_nav_link">About Me</a>
 					<a href="#" class="footer_nav_link">Blog</a>
 					<a href="#" class="footer_nav_link">Contact</a>
-					<a href="#" class="footer_nav_link footer_nav_link_btn">Hire Me</a>
+					<a href="#" class="footer_nav_link footer_nav_link_btn" data-modal="#modal_hire_me">Hire Me</a>
 				</nav>
 			</div>
 		</div>
 	</footer>
 
 <!-- Modals -->
-	<div class="modal" style="display: none">
+	<div class="modal" id="modal_work">
 		<div class="modal_dialog">
-			<button class="modal_close" type="button">
+			<button class="modal_close" data-close type="button">
 				<img src="assets/images/modal/signs.svg" alt="">
 			</button>
 			<div class="modal_work">
 				<div class="modal_work_preview">
-					<img src="https://placehold.it/790x780" alt="Close" class="modal_work_photo">
+					<div data-slider='slick'>
+						<div>
+							<img src="https://placehold.it/790x780" alt="Close" class="modal_work_photo">							
+						</div>
+						<div>
+							<img src="https://placehold.it/790x780/333" alt="Close" class="modal_work_photo">
+						</div>
+						<div>
+							<img src="https://placehold.it/790x780/777" alt="Close" class="modal_work_photo">
+						</div>
+					</div>
 				</div>
 				<div class="modal_work_content">
 					<div class="modal_work_header">
@@ -382,11 +393,11 @@
 					</div>
 
 					<div class="modal_work_footer">
-						<button class="modal_work_btn" type="button">
+						<button class="modal_work_btn slickPrev" type="button">
 							<img height="12" src="assets/images/modal/skip.svg" alt="">
 							Previous
 						</button>
-						<button class="modal_work_btn" type="button">
+						<button class="modal_work_btn slickNext" type="button">
 							Next
 							<img height="12" src="assets/images/modal/multimedia-option.svg" 
 							alt="">
@@ -397,9 +408,60 @@
 		</div>
 	</div> <!-- modal -->
 
-	<div class="modal" style="display: none">
+	<div class="modal" id="modal_work_2">
 		<div class="modal_dialog">
-			<button class="modal_close" type="button">
+			<button class="modal_close" data-close type="button">
+				<img src="assets/images/modal/signs.svg" alt="">
+			</button>
+			<div class="modal_work">
+				<div class="modal_work_preview">
+					<div data-slider='slick'>
+						<div>
+							<img src="https://placehold.it/790x780" alt="Close" class="modal_work_photo">							
+						</div>
+						<div>
+							<img src="https://placehold.it/790x780/333" alt="Close" class="modal_work_photo">
+						</div>
+						<div>
+							<img src="https://placehold.it/790x780/777" alt="Close" class="modal_work_photo">
+						</div>
+					</div>
+				</div>
+				<div class="modal_work_content">
+					<div class="modal_work_header">
+						<h3 class="modal_work_title">PROJECT TITLE 2</h3>
+						<div class="modal_work_info">
+							category <span>|<span> 2018
+						</div>
+					</div>
+					<div class="modal_work_client">
+						<div class="modal_work_client_title">Client:</div>
+						<div class="modal_work_client_subtitle">Creative Agency</div>
+					</div>
+
+					<div class="modal_work_text">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas pellentesque eu enim eget luctus. Sed augue felis, facilisis et elementum vitae, aliquam sit amet ante. Sed iaculis eros sem, elementum consequat est consequat eu. Quisque aliquet a ipsum nec tincidunt. Nulla vitae rhoncus leo. Praesent dui sapien, bibendum quis tempus dictum, auctor ac dui. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec at mauris porta, ullamcorper sem quis, lobortis sem. Donec sit amet aliquet dui, at varius est. Phasellus porttitor finibus neque vel vehicula. Duis in nulla egestas, dignissim elit at, imperdiet eros. Integer tristique posuere purus. Suspendisse placerat, quam vitae ullamcorper</p>
+					</div>
+
+					<div class="modal_work_footer">
+						<button class="modal_work_btn slickPrev" type="button">
+							<img height="12" src="assets/images/modal/skip.svg" alt="">
+							Previous
+						</button>
+						<button class="modal_work_btn slickNext" type="button">
+							Next
+							<img height="12" src="assets/images/modal/multimedia-option.svg" 
+							alt="">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div> <!-- modal -->
+
+	<div class="modal"  id="modal_resume">
+		<div class="modal_dialog">
+			<button class="modal_close" data-close type="button">
 				<img src="assets/images/modal/signs.svg" alt="">
 			</button>
 			<div class="modal_resume">
@@ -525,9 +587,9 @@
 		</div>
 	</div> <!-- modal -->
 
-	<div class="modal" style="display:none">
+	<div class="modal"  id="modal_hire_me">
 		<div class="modal_dialog modal_dialog_sm">
-			<button class="modal_close" type="button">
+			<button class="modal_close" data-close type="button">
 				<img src="assets/images/modal/signs.svg" alt="">
 			</button>
 			<div class="modal_content">
@@ -563,7 +625,9 @@
 			</div>
 		</div>
 	</div> <!-- modal -->
-	
+
+	<!-- JS -->
+	<script type="text/javascript" src="assets/js/slick.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>
 </html>
