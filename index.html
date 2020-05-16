@@ -6,11 +6,10 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200,300;400;700&display=swap" rel="stylesheet">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon/favicon.svg">
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
 	<title>Portfolio</title>
 </head>
 <body>
-	<header class="header">
+	<header class="header" id="header">
 		<div class="container">
 			<div class="header_inner">
 				<div class="logo">
@@ -22,18 +21,21 @@
 						<div class="prof_name">Web Designer</div>
 					</div>
 				</div>
-				<nav class="nav">
-					<a href="#" class="nav_item">work</a>
-					<a href="#" class="nav_item">about me</a>
-					<a href="#" class="nav_item">blog</a>
-					<a href="#" class="nav_item">contact</a>
+				<nav id="nav" class="nav">
+					<a href="#" data-scroll="#works" class="nav_item">work</a>
+					<a href="#" data-scroll="#about_me" class="nav_item">about me</a>
+					<a href="#" data-scroll="#blog" class="nav_item">blog</a>
+					<a href="#" data-modal="#modal_resume" class="nav_item">resume</a>
 					<a href="#" data-modal="#modal_hire_me" class="nav_item nav_item_btn">hire me</a>
 				</nav>
+				<button type="button" id="nav-toggle" class="burger">
+					<img class="burger_icon" src="assets/images/media/bars.svg" alt="">
+				</button>
 			</div>
 		</div>
 	</header>
 
-	<section class="intro">
+	<section class="intro" id="intro">
 		<div class="container">
 			<div class="intro_inner">
 				<div class="intro_content">
@@ -68,7 +70,7 @@
 		</div>
 	</section> <!-- intro -->
 
-	<div class="works">
+	<div class="works" id="works">
 		<div class="container">
 			<div class="works_nav">
 				<a class="works_nav_item" href="#" data-filter="all">All</a>
@@ -196,7 +198,7 @@
 				</div>
 			</div> <!-- portflio -->
 			
-			<div class="help">
+			<div class="help" id="about_me">
 				<a href="#" class="btn btn_sm">LOAD MORE WORK</a>
 			</div>
 		</div>
@@ -242,7 +244,7 @@
 		</div>
 	</div> <!-- reviwes -->
 
-	<section class="news">
+	<section class="news" id="blog">
 		<div class="container">
 			<div class="news_header">
 				<div class="news_title">read me</div>
@@ -627,6 +629,7 @@
 	</div> <!-- modal -->
 
 	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.min.js"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>
 </body>

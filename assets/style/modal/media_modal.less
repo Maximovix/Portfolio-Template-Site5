@@ -1,0 +1,181 @@
+// main: media.less;
+
+@media (max-width: 1200px) {
+	/* Modal Work */
+	.modal{
+		padding: 2rem;
+	}
+
+	.modal_work_preview,
+	.modal_work_content {
+		width: 50%;
+	}
+}
+
+@media (max-width: 1000px) {
+	/* Modal Contact */
+	.modal_content {
+		background: none;
+	}
+
+	.contact_left {
+		width: 100%;
+	}
+
+	.btn_form {
+		text-align: center;
+	}
+}
+
+@media (max-width: 900px) {
+	/* Modal Work */
+	.modal_work_content {
+		padding: 2rem 4rem 1rem 1rem;
+	}
+
+	.modal_work_text {
+		margin-bottom: 5rem;
+	}
+
+	.modal_work_footer {
+		bottom: 1rem;
+	}
+}
+
+@media (max-width: 750px) {
+	/* Modal Work */
+	.modal_work {
+		flex-wrap: wrap;
+	}
+
+	.modal_work_preview{
+		height: 100vh; 
+		width: 100%;
+
+		img {
+			height: 100%;
+		}
+	}
+
+	.modal_work_content {
+		width: 100%;
+	}
+
+	/* Modal Resume */
+	.modal_resume {
+		margin: 3rem .5rem;
+	}
+
+	.modal_title {
+		font-size: 1.5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.modal_resume_timeline {
+		margin: 2rem 0;
+	}
+
+	.timeline_item {
+		margin-bottom: 1.5rem;
+	}
+
+	.timeline_title {
+		margin-bottom: 1rem;
+	}
+
+	.timeline_col_left  {
+		padding-right: 1rem;
+	}
+
+	.timeline_col_right {
+		padding-left: 1rem;
+	}
+
+	.timeline_date {
+		font-size: .7rem;
+	}
+
+	.timeline_text {
+		font-size: .6rem;
+	}
+}
+
+@media (max-width: 550px) {
+	/* Modal Work */
+	.modal{
+		padding: 0;
+	}
+
+	.modal_work_header {
+		margin-bottom: 1.5rem;
+	}
+
+	.modal_work_client {
+		margin-bottom: 1.5em;
+	}
+
+	.modal_work_content {
+		padding: 1rem;
+	}
+
+	.modal_work_title {
+		font-size: 1.5rem;
+	}
+
+	.modal_work_info {
+		font-size: .8rem;
+	}
+
+	.modal_work_text {
+		font-size: .6rem;
+		margin-bottom: 3rem;
+	}
+
+	/* Modal Contact */ 
+	.modal {
+		background-color: #fff;
+	}
+
+	.modal_content {
+		height: 100vh;
+	}
+
+	.btn_form {
+		button {
+			margin-bottom: 1.5rem;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	/* Modal Resume */
+	.modal_resume_timeline {
+		flex-wrap: wrap;
+		margin-bottom: 0;
+	}
+
+	.timeline_col {
+		width: 90%;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.timeline_col_left,
+	.timeline_col_right {
+		border: none;
+	}
+
+	.timeline_item {
+		margin-bottom: 3rem;
+
+		padding-top: 1rem;
+		padding-bottom: 1rem;
+
+		border-top: 1px solid #6a696b;
+		border-bottom: 1px solid #6a696b;
+
+		&:last-child {
+			margin-bottom: 3rem;
+		}
+	}
+}

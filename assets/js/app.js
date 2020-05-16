@@ -2,6 +2,26 @@ $(function() {
 
 	const worksSlider = $('[data-slider="slick"]');
 	let filter = $("[data-filter");
+	let scrollPosition = $(window).scrollTop(),
+		header = $("#header"),
+	 	intro = $("#intro"),
+	 	introH,
+	 	headerH;
+
+	/* Scroll */
+	$("[data-scroll]").on("click",function(event) {
+		event.preventDefault();
+		let blockID = $(this).data('scroll'),
+			blockOffSet = $(blockID).offset().top;
+
+		headerH = header.innerHeight();
+
+		nav.removeClass("show");
+
+		$('html,body').animate({
+			scrollTop: blockOffSet - headerH - 20
+		}, 700);
+	});
 
 	/* Filter */
 	filter.on("click", function(event) {
@@ -102,4 +122,16 @@ $(function() {
 		
 		currentSlider.slick('slickNext');
 	});
+
+	/* Nav-Toggle */
+	const navToggle = $('#nav-toggle');
+	const nav = $('#nav');
+
+	navToggle.on('click', function(event) {
+		event.preventDefault();
+		
+		nav.toggleClass("show");
+	});
+
+
 });
